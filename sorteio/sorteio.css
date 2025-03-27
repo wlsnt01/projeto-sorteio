@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url(./assets/sorte.webp);
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.container {
+    /*no centro da tela*/
+   
+    margin-top: 15vh;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15vh;
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px;
+    background: radial-gradient(circle, rgba(50, 50, 50, 0.4), rgba(0, 0, 0, 0.95)); /* Gradiente mais escuro */
+    border: 2px solid rgba(255, 255, 255, 0.05); /* Borda discreta */
+    box-shadow: 
+      inset 0 0 100px rgba(0, 0, 0, 0.9), /* Sombra interna ainda mais escura */
+      inset 0 0 150px rgba(255, 255, 255, 0.02), /* Brilho interno quase imperceptível */
+      0 0 20px rgba(0, 0, 0, 0.9), /* Sombra externa forte */
+      0 0 30px rgba(255, 255, 255, 0.1); /* Brilho suave, sem exagero */
+    animation: shimmer 3s ease-in-out infinite;
+    background-size: 200% 200%; /* Para dar uma sensação de movimento no fundo */
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+.image {
+    width: 30vh;
+    height: auto;
+}
+
+input {
+
+    width: 200px;
+    height: 60px;
+    background: #dbcbcb;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    display: inline-block;
+    /* input um ao lado do outro */
+    gap: 20px;
+    /* Espaço entre os inputs */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+
+
+}
+
+.generate-button {
+    border-radius: 10px;
+    background: #0a8324;
+    box-shadow: 0px 8px 20px rgba(174, 195, 70, 0.35);
+    width: 320px;
+    height: 60px;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.generate-button:hover {
+    transform: scale(1.1);
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #1eff00;
+}
+
+#result {
+    font-size: 32px;
+    color: #0a8324;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    /* Ajustes para telas menores (tablets e smartphones) */
+    .container {
+        width: 100vh; /* Aumenta a largura da container para preencher mais a tela */
+        height: 100vh;
+        margin: 0;
+        border: none;
+        border-radius: 0 0 30px 0;
+     
+      
+    }
+    body {
+        background:url(./assets/dados\ vermelhos.webp)
+    }
+
+    .image {
+        width: 40vh; /* Ajusta o tamanho da imagem para telas menores */
+    }
+
+    input {
+        width: 90%; /* Ajusta o input para usar mais da largura da tela */
+    }
+
+    .generate-button {
+        font-size: 22px; /* Reduz o tamanho da fonte no botão */
+    }
+
+    #countdown {
+        font-size: 18px; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+
+    #result {
+        font-size: 20px; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+}
