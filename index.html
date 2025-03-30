@@ -14,8 +14,8 @@
         <p id="countdown"></p>
         <h1 id="result"></h1>
         
-            <input type="number" placeholder="Min Value" class="min-value">
-            <input type="number" placeholder="Max Value" class="max-value">
+            <input type="number" placeholder="Min Value" class="min-value" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <input type="number" placeholder="Max Value" class="max-value" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
        
         <button class="generate-button" id="generate-btn">Sortear</button>
 
